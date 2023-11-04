@@ -25,12 +25,16 @@ for (let i = 0; i < 4; i++) {
 
 setInterval(function () {
     if (userCards.length === 3) {
-        if (userCards[0] === userCards[1] && userCards[1] === userCards[2]) {
-            alert('Вы выиграли!')
+        if (userCards[0] !== userCards[1]) {
+            alert('Вы проиграли! Надо тренироваться')
+            userCards = []
+            window.location.reload()
+        } else if (userCards[1] !== userCards[2]) {
+            alert('Вы проиграли! Надо тренироваться')
             userCards = []
             window.location.reload()
         } else {
-            alert('Вы проиграли!')
+            alert('Вы выиграли! Харош')
             userCards = []
             window.location.reload()
         }
