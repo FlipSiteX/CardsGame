@@ -24,19 +24,13 @@ for (let i = 0; i < 4; i++) {
 }
 
 setInterval(function () {
-    if (userCards.length === 3) {
-        if (userCards[0] !== userCards[1]) {
-            alert('Вы проиграли! Надо тренироваться')
-            userCards = []
-            window.location.reload()
-        } else if (userCards[1] !== userCards[2]) {
-            alert('Вы проиграли! Надо тренироваться')
-            userCards = []
-            window.location.reload()
-        } else {
-            alert('Вы выиграли! Харош')
-            userCards = []
-            window.location.reload()
-        }
+    if (userCards.length === 2 && userCards[0] !== userCards[1]) {
+        alert('Вы проиграли! Надо тренироваться')
+        userCards = []
+        window.location.reload()
+    } else if (userCards.length === 3 && userCards[1] === userCards[2]) {
+        alert('Вы выиграли! Харош')
+        userCards = []
+        window.location.reload()
     }
 }, 500)
