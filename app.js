@@ -33,4 +33,4 @@ setInterval(function () {
         userCards = []
         window.location.reload()
     }
-}, 500)
+}, 50)
