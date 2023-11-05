@@ -32,5 +32,9 @@ setInterval(function () {
         alert('Вы выиграли! Харош')
         userCards = []
         window.location.reload()
+    } else if (userCards.length === 3 && (userCards[0] !== userCards[1] || userCards[1] !== userCards[2])) {
+        alert('Вы проиграли! Надо тренироваться')
+        userCards = []
+        window.location.reload()
     }
-}, 100)
+}, 300)
